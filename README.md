@@ -128,4 +128,4 @@ The json data for the accordion and its variants is at [Accordion-json](./accord
 
 * * *    
 
-PS: I Will be sharing a live example soon.
+live Example here: 	[https://sirius93.github.io/angular-accordion/](https://sirius93.github.io/angular-accordion/)

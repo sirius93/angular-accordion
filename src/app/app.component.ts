@@ -13,14 +13,14 @@ const accordionJSON = require('./accordion.json');
 export class AppComponent {
   title = 'app';
   componentsMap: any;
-     private accordionJSON: any = accordionJSON;
-     private expander: Accordion = Object.assign({}, accordionJSON, {module: {variantID: '2'}});
-     private accordion: Accordion = Object.assign({}, accordionJSON, {module: {variantID: '1'}});
+     public accordionJSON: any = accordionJSON;
+     public expander: Accordion = Object.assign({}, accordionJSON, {module: {variantID: '2'}});
+     public accordion: Accordion = Object.assign({}, accordionJSON, {module: {variantID: '1'}});
 
-     private variationOne = `<dui-accordion [data]='variationwithoutImage' [componentsMap]="componentsMap"></dui-accordion>`;
-     private variationTwo = `<dui-accordion [data]='variationwithImage' [componentsMap]="componentsMap"></dui-accordion>`;
-     private variationThree = `<dui-accordion [data]="expander" [componentsMap]="componentsMap"></dui-accordion>`;
-     private variationFour = `<dui-accordion>
+     public variationOne = `<dui-accordion [data]='variationwithoutImage' [componentsMap]="componentsMap"></dui-accordion>`;
+     public variationTwo = `<dui-accordion [data]='variationwithImage' [componentsMap]="componentsMap"></dui-accordion>`;
+     public variationThree = `<dui-accordion [data]="expander" [componentsMap]="componentsMap"></dui-accordion>`;
+     public variationFour = `<dui-accordion>
     This is a outer header
     <dui-accordion-container>
         <div class="dui-accordion-header">
