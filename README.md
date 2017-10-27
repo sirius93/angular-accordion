@@ -6,23 +6,126 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Accordion Module
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+## Description
+ The accordion module will contain descriptions about products and features with a header and subheader
+ It can also contain modules that can be dyanmically injected into it. same applies to the expander variant of it.
 
-## Build
+## Variations
+This module contains three variants:
+1\. Accordion
+2\. Expander
+3\. Accordion as functionality
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+In accordions if one accordion is open all other accordions will be closed,
 
-## Running unit tests
+## Link to the json
+The json data for the accordion and its variants is at [Accordion-json](./accordion.json)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* * *
 
-## Running end-to-end tests
+#### Variation 1 <span class="label label-default text-uppercase">json</span>
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+* * *
 
-## Further help
+      var accordion = {
+      "module": {
+        "variantID": "1"
+      },
+      "content": [
+        {
+          "header": "H4 copy secondary header 22px",
+          "content": "p copy 14 px Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        },
+        {
+          "header": "H4 copy secondary header 22px",
+          "content": "p copy 14 px Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        },
+        {
+          "header": "H4 copy secondary header 22px",
+          "content": "p copy 14 px Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        }
+      ]
+    }
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+#### Variation 1 <span class="label label-default text-uppercase">usage</span>
+
+* * *
+
+#### ######
+``` <ngx-accordion [data]="accordion"></ngx-accordion> ```
+
+* * *
+
+#### Variation 2 <span class="label label-default text-uppercase">json</span>
+
+    var expander = {
+      "module": {
+        "variantID": "2"
+      },
+      "content": [
+        {
+          "header": "H4 copy secondary header 22px",
+          "content": "p copy 14 px Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        },
+        {
+          "header": "H4 copy secondary header 22px",
+          "content": "p copy 14 px Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        },
+        {
+          "header": "H4 copy secondary header 22px",
+          "content": "p copy 14 px Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        }
+      ]
+    }
+
+* * *
+
+#### Variation 2 <span class="label label-default text-uppercase">usage</span>
+
+* * *
+
+#### ######
+``` <ngx-accordion [data]="expander"></ngx-accordion> ```
+
+* * *
+
+#### Variation 4 <span class="label label-default text-uppercase">json</span>
+
+* * *
+
+          No JSON | using tags
+
+* * *
+
+#### Variation 4 <span class="label label-default text-uppercase">usage</span>
+
+* * *
+``` 
+    <ngx-accordion>
+        This is a outer header
+        <ngx-accordion-container>
+            <div class="ngx-accordion-header">
+                <span>Accordion Header 1</span>
+                <button>
+                    <ngx-accordion-toggle>Custom clickable heading</ngx-accordion-toggle>
+                </button>
+            </div>
+            <div class="ngx-accordion-body">
+                <div>Accordion body 1</div>
+            </div>
+        </ngx-accordion-container>
+        <ngx-accordion-container>
+            <div class=" ngx-accordion-header ">
+                <div>Accordion Header 2</div>
+            </div>
+            <div class="ngx-accordion-body">
+                <div>Accordion body 2</div>
+            </div>
+    </ngx-accordion
+```
+
+* * *    
+
+PS: I Will be sharing a live example soon.
