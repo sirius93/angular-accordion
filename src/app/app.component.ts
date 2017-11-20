@@ -17,29 +17,29 @@ export class AppComponent {
      public expander: Accordion = Object.assign({}, accordionJSON, {module: {variantID: '2'}});
      public accordion: Accordion = Object.assign({}, accordionJSON, {module: {variantID: '1'}});
 
-     public variationOne = `<dui-accordion [data]='variationwithoutImage' [componentsMap]="componentsMap"></dui-accordion>`;
-     public variationTwo = `<dui-accordion [data]='variationwithImage' [componentsMap]="componentsMap"></dui-accordion>`;
-     public variationThree = `<dui-accordion [data]="expander" [componentsMap]="componentsMap"></dui-accordion>`;
-     public variationFour = `<dui-accordion>
+     public variationOne = `<ngx-accordion [data]='variation1' ></ngx-accordion>`;
+     public variationTwo = `<ngx-accordion [data]='variation2' ></ngx-accordion>`;
+     public variationThree = `<ngx-accordion [data]="expander" ></ngx-accordion>`;
+     public variationFour = `<ngx-accordion>
     This is a outer header
-    <dui-accordion-container>
-        <div class="dui-accordion-header">
+    <ngx-accordion-container>
+        <div class="ngx-accordion-header">
             <span>Accordion Header 1</span>
             <button>
-                <dui-accordion-toggle>Custom clickable heading</dui-accordion-toggle>
+                <ngx-accordion-toggle>Custom clickable heading</ngx-accordion-toggle>
             </button>
         </div>
-        <div class="dui-accordion-body">
+        <div class="ngx-accordion-body">
             <div>Accordion body 1</div>
         </div>
-    </dui-accordion-container>
-    <dui-accordion-container> 
-        <div class="dui-accordion-header">
+    </ngx-accordion-container>
+    <ngx-accordion-container> 
+        <div class="ngx-accordion-header">
             <div>Accordion Header 1</div>
         </div>
-        <div class="dui-accordion-body">
+        <div class="ngx-accordion-body">
             <div>Accordion body 1</div>
         </div>
-    </dui-accordion-container>
-</dui-accordion>`;
+    </ngx-accordion-container>
+</ngx-accordion>`;
 }

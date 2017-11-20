@@ -13,12 +13,15 @@
                         <div class="panel-heading">Examples</div>
                         <div class="panel-body">
                             <h2>Accordion</h2>
+                            <h6>Consider this example as as your reference guide to implement angularx-accordion in your pages</h6>
+                            <p> use the <a href="https://github.com/sirius93/angular-accordion">Github Repo</a> for your reference</p>
                             <!--Variation One-->
                             <hr>
                             <h4>Variation 1 <span class="label label-default text-uppercase">json</span></h4>
                             <hr>
                             <pre highlight-js-content="code">
                               <code>
+                            var variation1  = 
                             {{accordion | json}}
                               </code>
                             </pre>
@@ -34,13 +37,14 @@
                             <h4>Variation 1 <span class="label label-default text-uppercase">output</span></h4>
                             <hr>
                             <!-- <ng-template [rgDynamicLoader]='[accordion]' [componentMapping]='componentsMap'></ng-template> -->
-                            <ngx-accordion [data]='accordion' [componentsMap]="componentsMap"></ngx-accordion>
+                            <ngx-accordion [data]='accordion' ></ngx-accordion>
 
                             <hr>
                             <h4>Variation 2 <span class="label label-default text-uppercase">json</span></h4>
                             <hr>
                             <pre highlight-js-content="code">
                               <code>
+                            var variation2 =
                             {{ expander | json}}
                               </code>
                             </pre>
@@ -56,7 +60,7 @@
                             <h4>Variation 2 <span class="label label-default text-uppercase">output</span></h4>
                             <hr>
                             <!-- <ng-template [rgDynamicLoader]='[expander]' [componentMapping]='componentsMap'></ng-template> -->
-                            <ngx-accordion [data]="expander" [componentsMap]="componentsMap"></ngx-accordion>
+                            <ngx-accordion [data]="expander" ></ngx-accordion>
 
 
                             <hr>
